@@ -225,16 +225,17 @@
 
 .name {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  justify-items: center;
   padding: 16px;
   gap: 10px;
   margin-top: 20px;
 
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
   height: 46px;
-  left: calc(50% - 382px / 2);
-  top: calc(50% - 46px / 2 - 128px);
+  /* left: calc(50% - 382px / 2);
+  top: calc(50% - 46px / 2 - 128px); */
 
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -243,12 +244,12 @@
 
 .email {
   display: flex;
-  flex-direction: row;
   align-items: center;
   padding: 16px;
   gap: 10px;
 
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
   height: 46px;
   left: calc(50% - 382px / 2 + 0.5px);
   top: calc(50% - 46px / 2 - 66px);
@@ -270,7 +271,8 @@
   padding: 16px;
   gap: 10px;
 
-  width: 177px;
+  width: 100%;
+  max-width: 420px;
   height: 46px;
   left: calc(50% - 177px / 2 - 102px);
   top: calc(50% - 46px / 2 - 4px);
@@ -279,7 +281,6 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   margin-top: 20px;
-  margin-right: 8px;
 }
 
 .select {
@@ -288,7 +289,8 @@
   align-items: center;
   padding: 16px;
   gap: 10px;
-  width: 189px;
+  width: 100%;
+  max-width: 420px;
   height: 46px;
   left: calc(50% - 189px / 2 + 97px);
   top: calc(50% - 46px / 2 - 4px);
@@ -297,7 +299,7 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   margin-top: 20px;
-  margin-left: 8px;
+  margin-left: 50px;
 }
 
 .textarea {
@@ -307,7 +309,8 @@
   padding: 16px;
   gap: 10px;
 
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
   height: 116px;
   left: calc(50% - 382px / 2 + 0.5px);
   top: calc(50% - 116px / 2 + 93px);
@@ -318,11 +321,12 @@
   margin-top: 20px;
 }
 
-.submit p {
-  width: 351px;
+.submit-p {
+  width: 100%;
+  max-width: 420px;
   height: 21px;
 
-  font-family: "Pacifico";
+  font-family: "Pacifico", cursive;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -334,7 +338,7 @@
   text-align: center;
 
   color: #ffffff;
-  margin-left: 190px;
+  margin-left: 177px;
 }
 .submit {
   display: flex;
@@ -343,7 +347,8 @@
   padding: 16px;
   gap: 10px;
 
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
   height: 53px;
   left: calc(50% - 383px / 2 + 0.5px);
   top: calc(50% - 53px / 2 + 209.5px);
@@ -356,4 +361,50 @@
 
 .second {
   z-index: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrap-second {
+    flex-direction: column;
+    width: 100%;
+    max-width: 420px;
+    margin-right: 50px;
+    transition: width 2s;
+  }
+
+  .wrap-second .tel {
+    transition: width 2s;
+    margin-left: 8px;
+  }
+
+  .wrap-second .select {
+    transition: width 2.5s;
+    margin-left: 8px;
+  }
+
+  .submit-p {
+    align-self: center;
+    margin-left: 185px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .reser-title {
+    width: 50%;
+    margin-top: 20px;
+    margin-right: 120px;
+  }
+
+  .form1 {
+    margin-bottom: 100px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+  }
+
+  .submit-p {
+    align-self: center;
+    margin-left: 100px;
+  }
 }
